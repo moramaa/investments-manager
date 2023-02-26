@@ -1,0 +1,41 @@
+// This is your Prisma schema file,
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            Int      @id @default(autoincrement())
+  email         String   @unique
+  firstName     String?
+  lastName      String?
+  age           Int?
+  AverageSalary Int?
+  createdAt     DateTime @default(now())
+  invests       Invest[]
+}
+
+model Invest {
+  investmentID       Int      @id @default(autoincrement())
+  investmentName     String   @default("investment")
+  investmentProduced String?
+  insuranceCompany   String?
+  isActive           Boolean  @default(true)
+  startDateOfInvest  DateTime
+
+  initialInvestment     Int?   @default(0)
+  monthlyDeposit        Int?   @default(0)
+  yearsOfInvestment     Int?   @default(0)
+  annualManagementFees  Float? @default(0)
+  monthlyManagementFees Float? @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id])
+  userId    Int
+}
