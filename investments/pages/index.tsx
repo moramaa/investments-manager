@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <ConfigProvider direction="rtl">
       <Layout className="layout">
-        <Sider trigger={null} collapsible collapsed={collapsed}>
+        <Sider trigger={null} collapsible collapsed={collapsed} aria-hidden>
           <div className="logo" />
           <Menu
             theme="dark"
@@ -28,6 +28,7 @@ export default function Home() {
                 key: '1',
                 icon: <UserOutlined />,
                 label: 'nav 1',
+                
               },
               {
                 key: '2',
