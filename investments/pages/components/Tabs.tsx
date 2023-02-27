@@ -1,5 +1,6 @@
 import React from 'react'
 import { PageContainer, ProCard } from '@ant-design/pro-components';
+import Modalform from './Modalform';
 
 type Props = {}
 
@@ -15,7 +16,7 @@ const Tabs = (props: Props) => {
                     title: 'ההשקעות שלך ',
                     ghost: true,
                     extra: [
-                       
+                       <Modalform/>
                     ],
                 }}
                 tabList={[
