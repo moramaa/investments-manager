@@ -15,6 +15,7 @@ const { Header, Sider, Content } = Layout;
 export default function Home() {
   const [collapsed, setCollapsed] = useState(true);
   return (
+    <><Tabs></Tabs>
     <ConfigProvider direction="rtl">
       <Layout className="layout">
         <Sider trigger={null} collapsible collapsed={collapsed}>
@@ -28,7 +29,6 @@ export default function Home() {
                 key: '1',
                 icon: <UserOutlined />,
                 label: 'nav 1',
-                
               },
               {
                 key: '2',
@@ -40,8 +40,7 @@ export default function Home() {
                 icon: <UploadOutlined />,
                 label: 'nav 3',
               },
-            ]}
-          />
+            ]} />
         </Sider>
         <Layout className="site-layout">
           <Header
@@ -54,7 +53,6 @@ export default function Home() {
               className: 'trigger',
               onClick: () => setCollapsed(!collapsed),
             })}
-            <Tabs></Tabs>
           </Header>
           <Content
             className="site-layout-background"
@@ -69,6 +67,6 @@ export default function Home() {
       </Layout>
 
 
-    </ConfigProvider>
+    </ConfigProvider></>
   )
 }
