@@ -8,6 +8,7 @@ import {
 } from '@ant-design/icons';
 import React, { useState } from 'react';
 import { ConfigProvider, Layout, Menu } from 'antd/lib';
+import Tabs from './components/Tabs';
 
 const { Header, Sider, Content } = Layout;
 
@@ -53,6 +54,7 @@ export default function Home() {
               className: 'trigger',
               onClick: () => setCollapsed(!collapsed),
             })}
+            <Tabs></Tabs>
           </Header>
           <Content
             className="site-layout-background"
