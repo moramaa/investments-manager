@@ -1,4 +1,3 @@
-import Tabs from '../components/Tabs';
 
 import {
   MenuFoldOutlined,
