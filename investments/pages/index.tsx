@@ -7,8 +7,8 @@ import {
   UserOutlined,
   VideoCameraOutlined,
 } from '@ant-design/icons';
-import { ConfigProvider, Layout, Menu } from 'antd/lib';
 import React, { useState } from 'react';
+import { ConfigProvider, Layout, Menu } from 'antd/lib';
 
 const { Header, Sider, Content } = Layout;
 
@@ -62,8 +62,6 @@ export default function Home() {
               padding: 24,
             }}
           >
-
-         <Tabs></Tabs>
 
           </Content>
         </Layout>
