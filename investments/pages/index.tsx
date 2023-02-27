@@ -15,8 +15,6 @@ const { Header, Sider, Content } = Layout;
 export default function Home() {
   const [collapsed, setCollapsed] = useState(true);
   return (
-    <><Tabs></Tabs>
-    <ConfigProvider direction="rtl">
       <Layout className="layout">
         <Sider trigger={null} collapsible collapsed={collapsed}>
           <div className="logo" />
@@ -61,12 +59,11 @@ export default function Home() {
               padding: 24,
             }}
           >
-
+                <Tabs/>
           </Content>
         </Layout>
       </Layout>
 
 
-    </ConfigProvider></>
   )
 }
