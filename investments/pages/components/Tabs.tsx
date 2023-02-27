@@ -16,7 +16,7 @@ const Tabs = (props: Props) => {
                     title: 'ההשקעות שלך ',
                     ghost: true,
                     extra: [
-                       <Modalform/>
+                        <Modalform key={"buttonForm"} ></Modalform>,
                     ],
                 }}
                 tabList={[
